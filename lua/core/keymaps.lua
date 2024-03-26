@@ -2,15 +2,17 @@
 vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
-
+     -----------
 --------------------- General Keymaps
 ---------------------
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
 
+local opts = { noremap = true, silent = true }
+
 -- clear search highlights
-keymap.set("n", "<leader>nh", ":nohl<CR>")
+keymap.set("n", "<leader>hh", ":nohl<CR>")
 
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
@@ -46,5 +48,22 @@ keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv")
 keymap.set("n", "<S-j>", ":+5<cr>", { noremap = true, silent = true })
 keymap.set("n", "<S-k>", ":-5<cr>", { noremap = true, silent = true })
 
+-- move to first or last charactor of the line
+keymap.set("n", "<S-l>", "$")
+keymap.set("v", "<S-l>", "$")
+keymap.set("n", "<S-h>", "^")
+keymap.set("v", "<S-h>", "^")
+
 -- delete all word at current cursor
 keymap.set("n", "dw", "daw")
+
+-- comment line
+keymap.set("n", "<leader>/", "gcc", { remap = true }) -- toggle comment on current line
+keymap.set("v", "<leader>/", "gc", { remap = true }) -- toggle comment on current line
+
+
+-- switch windows
+keymap.set("n", "<C-h>", ":wincmd h<cr>", opts)
+keymap.set("n", "<C-j>", ":wincmd j<cr>", opts)
+keymap.set("n", "<C-k>", ":wincmd k<cr>", opts)
+keymap.set("n", "<C-l>", ":wincmd l<cr>", opts)

@@ -34,5 +34,19 @@ require("nvim-tree").setup({
   filters = {
     dotfiles = true,
   },
+	actions = {
+		open_file = {
+			window_picker = {
+				enable = true,
+			},
+		},
+	},
+	update_focused_file = {
+		enable = true,
+		update_cwd = true,
+	},
+	git = {
+		ignore = true,
+	},
   on_attach = my_on_attach,
 })
