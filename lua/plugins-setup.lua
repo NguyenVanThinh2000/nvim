@@ -40,11 +40,11 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-	use ("wbthomason/packer.nvim") -- Have packer manage itself	
+	use("wbthomason/packer.nvim") -- Have packer manage itself
 
 	use("nvim-tree/nvim-web-devicons")
 
-  -- color scheme
+	-- color scheme
 	use("nordtheme/vim")
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 	use("folke/tokyonight.nvim")
@@ -54,22 +54,21 @@ return packer.startup(function(use)
 	use("catppuccin/nvim")
 	use("crusoexia/vim-monokai")
 
-  -- file explorer
-  use("nvim-tree/nvim-tree.lua")
+	-- file explorer
+	use("nvim-tree/nvim-tree.lua")
 
-  use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
-  -- commenting with gc
+	-- commenting with gc
 	use("numToStr/Comment.nvim")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
-  -- require for telescope
-  use("nvim-lua/plenary.nvim")
-  use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})
-  use("nvim-treesitter/nvim-treesitter")
-  use({'nvim-telescope/telescope.nvim', tag = '0.1.6'}) 
-
+	-- require for telescope
+	use("nvim-lua/plenary.nvim")
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	use("nvim-treesitter/nvim-treesitter")
+	use({ "nvim-telescope/telescope.nvim", tag = "0.1.6" })
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
@@ -106,9 +105,26 @@ return packer.startup(function(use)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
 	-- formatting & linting
-	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+	-- use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+	-- use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
+	-- formatting width conform replace null-ls
+	use({
+		"stevearc/conform.nvim",
+		config = function()
+			require("conform").setup()
+		end,
+	})
+	use({
+		"mfussenegger/nvim-lint",
+		config = function()
+			require("lint").setup()
+		end,
+	})
+
+	-- git
+	use("lewis6991/gitsigns.nvim")
+	use("github/copilot.vim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
