@@ -122,12 +122,7 @@ return packer.startup(function(use)
 			require("conform").setup()
 		end,
 	})
-	use({
-		"mfussenegger/nvim-lint",
-		config = function()
-			require("lint").setup()
-		end,
-	})
+	use("mfussenegger/nvim-lint")
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
