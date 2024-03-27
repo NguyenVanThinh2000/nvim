@@ -79,3 +79,6 @@ keymap.set("v", "p", '"_dP', opts)
 keymap.set("n", "dd", '"_dd', opts)
 
 keymap.set("n", "<leader>q", ":bd<cr>", opts)
+
+-- git
+keymap.set("n", "<leader>gd", ":Gitsigns diffthis<cr>", opts)

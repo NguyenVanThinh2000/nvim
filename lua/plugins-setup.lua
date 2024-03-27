@@ -83,7 +83,7 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path") -- source for file system paths
 
 	-- snippets
-	use("L3MON4D3/LuaSnip") -- snippet engine
+	use("l3mon4d3/luasnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletio
 	use("rafamadriz/friendly-snippets") -- useful snippets
 
