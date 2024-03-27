@@ -1,5 +1,5 @@
 local opt = vim.opt -- for conciseness
-opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+opt.number = true -- shows absolute line number on cursor line (when relative number is on)options
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
@@ -22,5 +22,6 @@ vim.opt.updatetime = 300 -- faster completion
 vim.opt.expandtab = true -- convert tabs to spaces
 vim.opt.spell = false
 vim.opt.laststatus = 3
+vim.opt.laststatus = 0
 -- opt.relativenumber = true -- show relative line numbers
 -- opt.background = "dark" -- colorschemes that can be light or dark will be made dark

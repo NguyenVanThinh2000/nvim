@@ -44,6 +44,8 @@ return packer.startup(function(use)
 
 	use("nvim-tree/nvim-web-devicons")
 
+	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
+
 	-- color scheme
 	use("nordtheme/vim")
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
@@ -52,7 +54,12 @@ return packer.startup(function(use)
 	use("drewtempelmeyer/palenight.vim")
 	use("Mofiqul/dracula.nvim")
 	use("catppuccin/nvim")
-	use("crusoexia/vim-monokai")
+	use({
+		"loctvl842/monokai-pro.nvim",
+		config = function()
+			require("monokai-pro").setup()
+		end,
+	})
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")

@@ -2,8 +2,8 @@
 -- local status, _ = pcall(vim.cmd, "colorscheme nord")
 -- local status, _ = pcall(vim.cmd, "colorscheme gruvbox")
 -- local status, _ = pcall(vim.cmd, "colorscheme dracula")
-local status, _ = pcall(vim.cmd, "colorscheme monokai")
 -- local status, _ = pcall(vim.cmd, "colorscheme palenight")
+local status, _ = pcall(vim.cmd, "colorscheme monokai-classic")
 if not status then
 	print("Colorscheme not found!") -- print error if colorscheme not installed
 	return

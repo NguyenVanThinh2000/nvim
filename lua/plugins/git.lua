@@ -14,7 +14,6 @@ require("gitsigns").setup({
 	watch_gitdir = {
 		follow_files = true,
 	},
-	auto_attach = true,
 	attach_to_untracked = true,
 	current_line_blame = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
 	current_line_blame_opts = {
