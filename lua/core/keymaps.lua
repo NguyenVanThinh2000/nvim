@@ -82,3 +82,5 @@ keymap.set("n", "<leader>q", ":bd<cr>", opts)
 
 -- git
 keymap.set("n", "<leader>gd", ":Gitsigns diffthis<cr>", opts)
+keymap.set("n", "<C-S-right>", ":NvimTreeResize +5<cr>", opts)
+keymap.set("n", "<C-S-left>", ":NvimTreeResize -5<cr>", opts)
