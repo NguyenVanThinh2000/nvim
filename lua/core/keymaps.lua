@@ -84,3 +84,9 @@ keymap.set("n", "<leader>q", ":bd<cr>", opts)
 keymap.set("n", "<leader>gd", ":Gitsigns diffthis<cr>", opts)
 keymap.set("n", "<C-S-right>", ":NvimTreeResize +5<cr>", opts)
 keymap.set("n", "<C-S-left>", ":NvimTreeResize -5<cr>", opts)
+
+-- replace word
+keymap.set("n", "<leader>ra", ":%s/\\<<C-r><C-w>\\>//g<left><left>", opts)
+keymap.set("v", "<leader>ra", ":s/\\<<C-r><C-w>\\>//g<left><left>", opts)
+keymap.set("n", "<leader>rw", ":%s/\\<<C-r><C-w>\\>//gc<Left><Left><Left>", opts)
+keymap.set("v", "<leader>rw", ":s/\\<<C-r><C-w>\\>//gc<Left><Left><Left>", opts)
