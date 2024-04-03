@@ -11,6 +11,8 @@ require("conform").setup({
 		yaml = { { "prettierd", "prettier" } },
 		markdown = { { "prettierd", "prettier" } },
 		graphql = { { "prettierd", "prettier" } },
+		prettierrc = { { "prettierd", "prettier" } },
+		eslintrc = { { "prettierd", "prettier" } },
 		lua = { "stylua" },
 		python = { "isort", "black" },
 	},

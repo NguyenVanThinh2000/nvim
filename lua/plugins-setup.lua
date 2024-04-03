@@ -141,6 +141,8 @@ return packer.startup(function(use)
 		},
 	})
 
+	use("tribela/vim-transparent")
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

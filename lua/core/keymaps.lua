@@ -71,6 +71,9 @@ keymap.set("n", "<C-l>", ":wincmd l<cr>", opts)
 -- select word
 keymap.set("n", "sw", "viw")
 
+-- copy word
+keymap.set("n", "yw", "viwy")
+
 -- delete word and insert mode
 keymap.set("n", "di", '"_ciw', opts)
 
@@ -79,6 +82,8 @@ keymap.set("v", "p", '"_dP', opts)
 keymap.set("n", "dd", '"_dd', opts)
 
 keymap.set("n", "<leader>q", ":bd<cr>", opts)
+
+-- keymap.set("v", "d", '"_d', opts)
 
 -- git
 keymap.set("n", "<leader>gd", ":Gitsigns diffthis<cr>", opts)
