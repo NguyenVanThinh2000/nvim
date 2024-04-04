@@ -40,3 +40,7 @@ require("gitsigns").setup({
 		enable = false,
 	},
 })
+local opts = { noremap = true, silent = true }
+vim.keymap.set("n", "<leader>gd", ":DiffviewOpen<cr>", opts)
+vim.keymap.set("n", "<leader>gh", ":DiffviewFileHistory<cr>", opts)
+vim.keymap.set("n", "<leader>gc", ":DiffviewClose<cr>", opts)

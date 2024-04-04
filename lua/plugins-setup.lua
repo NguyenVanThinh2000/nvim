@@ -126,6 +126,7 @@ return packer.startup(function(use)
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
+	use("sindrets/diffview.nvim") -- view git diff
 	use("github/copilot.vim")
 
 	use("WhoIsSethDaniel/mason-tool-installer.nvim")
