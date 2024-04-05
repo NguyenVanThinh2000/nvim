@@ -115,6 +115,11 @@ _G.packer_plugins = {
     path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["diffview.nvim"] = {
+    loaded = true,
+    path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/diffview.nvim",
+    url = "https://github.com/sindrets/diffview.nvim"
+  },
   ["dracula.nvim"] = {
     loaded = true,
     path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/dracula.nvim",
@@ -135,6 +140,17 @@ _G.packer_plugins = {
     path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
+  ["indent-blankline.nvim"] = {
+    config = { "\27LJ\2\nf\0\0\5\0\5\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\0024\4\0\0B\2\2\0A\0\0\1K\0\1\0\14make_opts\23indent-rainbowline\nsetup\bibl\frequire\0" },
+    loaded = true,
+    path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["indent-rainbowline.nvim"] = {
+    loaded = true,
+    path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/indent-rainbowline.nvim",
+    url = "https://github.com/TheGLander/indent-rainbowline.nvim"
+  },
   ["lspkind.nvim"] = {
     loaded = true,
     path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
@@ -154,6 +170,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason-tool-installer.nvim"] = {
+    loaded = true,
+    path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/mason-tool-installer.nvim",
+    url = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
@@ -277,6 +298,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["vim-transparent"] = {
+    loaded = true,
+    path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/vim-transparent",
+    url = "https://github.com/tribela/vim-transparent"
   }
 }
 
@@ -285,6 +311,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for monokai-pro.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16monokai-pro\frequire\0", "config", "monokai-pro.nvim")
 time([[Config for monokai-pro.nvim]], false)
+-- Config for: indent-blankline.nvim
+time([[Config for indent-blankline.nvim]], true)
+try_loadstring("\27LJ\2\nf\0\0\5\0\5\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\0024\4\0\0B\2\2\0A\0\0\1K\0\1\0\14make_opts\23indent-rainbowline\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
+time([[Config for indent-blankline.nvim]], false)
 -- Config for: conform.nvim
 time([[Config for conform.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fconform\frequire\0", "config", "conform.nvim")
