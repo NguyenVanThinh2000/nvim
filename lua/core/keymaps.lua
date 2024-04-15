@@ -38,6 +38,8 @@ keymap.set("i", "<C-s>", "<ESC>:w<cr>", opts)
 
 -- Duplicate line
 keymap.set("n", "<C-d>", "yyp", opts)
+-- Duplicate line in visual mode
+keymap.set("v", "<C-d>", "yP", opts)
 
 -- Move lines and group lines up, down for windows
 keymap.set("n", "<A-k>", ":m .-2<cr>", opts)

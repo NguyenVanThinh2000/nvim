@@ -1,7 +1,7 @@
 require("conform").setup({
 	formatters_by_ft = {
 		javascript = { { "prettierd", "prettier" } },
-		typescript = { { "prettierd", "prettier" } },
+		typescript = { { "prettier" } },
 		javascriptreact = { { "prettierd", "prettier" } },
 		typescriptreact = { { "prettierd", "prettier" } },
 		svelte = { { "prettierd", "prettier" } },

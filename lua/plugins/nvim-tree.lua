@@ -31,9 +31,6 @@ require("nvim-tree").setup({
 	renderer = {
 		group_empty = true,
 	},
-	filters = {
-		dotfiles = false,
-	},
 	actions = {
 		open_file = {
 			window_picker = {
@@ -46,7 +43,10 @@ require("nvim-tree").setup({
 		update_cwd = true,
 	},
 	git = {
-		ignore = true,
+		ignore = false,
+	},
+	filters = {
+		dotfiles = false,
 	},
 	on_attach = my_on_attach,
 })
