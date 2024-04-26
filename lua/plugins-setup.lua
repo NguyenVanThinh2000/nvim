@@ -131,16 +131,19 @@ return packer.startup(function(use)
 
 	use("WhoIsSethDaniel/mason-tool-installer.nvim")
 
-	use({
-		"lukas-reineke/indent-blankline.nvim",
-		config = function()
-			-- Other blankline configuration here
-			require("ibl").setup(require("indent-rainbowline").make_opts({}))
-		end,
-		requires = {
-			"TheGLander/indent-rainbowline.nvim",
-		},
-	})
+	-- use({
+	-- 	"lukas-reineke/indent-blankline.nvim",
+	-- 	config = function()
+	-- 		-- Other blankline configuration here
+	-- 		require("ibl").setup(require("indent-rainbowline").make_opts({}))
+	-- 	end,
+	-- 	requires = {
+	-- 		"TheGLander/indent-rainbowline.nvim",
+	-- 	},
+	-- })
+
+	use("lukas-reineke/indent-blankline.nvim")
+	use("TheGLander/indent-rainbowline.nvim")
 
 	use("brenoprata10/nvim-highlight-colors")
 

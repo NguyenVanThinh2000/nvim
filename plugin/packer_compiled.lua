@@ -141,7 +141,6 @@ _G.packer_plugins = {
     url = "https://github.com/morhetz/gruvbox"
   },
   ["indent-blankline.nvim"] = {
-    config = { "\27LJ\2\nf\0\0\5\0\5\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\0024\4\0\0B\2\2\0A\0\0\1K\0\1\0\14make_opts\23indent-rainbowline\nsetup\bibl\frequire\0" },
     loaded = true,
     path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
@@ -201,6 +200,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-highlight-colors"] = {
+    loaded = true,
+    path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/nvim-highlight-colors",
+    url = "https://github.com/brenoprata10/nvim-highlight-colors"
   },
   ["nvim-lint"] = {
     loaded = true,
@@ -298,11 +302,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
-  },
-  ["vim-transparent"] = {
-    loaded = true,
-    path = "/home/thinhnguyen/.local/share/nvim/site/pack/packer/start/vim-transparent",
-    url = "https://github.com/tribela/vim-transparent"
   }
 }
 
@@ -311,10 +310,6 @@ time([[Defining packer_plugins]], false)
 time([[Config for monokai-pro.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16monokai-pro\frequire\0", "config", "monokai-pro.nvim")
 time([[Config for monokai-pro.nvim]], false)
--- Config for: indent-blankline.nvim
-time([[Config for indent-blankline.nvim]], true)
-try_loadstring("\27LJ\2\nf\0\0\5\0\5\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0006\2\0\0'\4\3\0B\2\2\0029\2\4\0024\4\0\0B\2\2\0A\0\0\1K\0\1\0\14make_opts\23indent-rainbowline\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
-time([[Config for indent-blankline.nvim]], false)
 -- Config for: conform.nvim
 time([[Config for conform.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fconform\frequire\0", "config", "conform.nvim")
