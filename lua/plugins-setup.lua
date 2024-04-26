@@ -142,6 +142,8 @@ return packer.startup(function(use)
 		},
 	})
 
+	use("brenoprata10/nvim-highlight-colors")
+
 	-- use("tribela/vim-transparent")
 
 	if PACKER_BOOTSTRAP then
