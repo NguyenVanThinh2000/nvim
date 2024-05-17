@@ -19,7 +19,7 @@ end
 vim.cmd([[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
+    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
   augroup end
 ]])
 
@@ -47,6 +47,7 @@ return packer.startup(function(use)
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
 	-- color scheme
+	use("craftzdog/solarized-osaka.nvim")
 	use("nordtheme/vim")
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 	use("folke/tokyonight.nvim")
@@ -111,10 +112,6 @@ return packer.startup(function(use)
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
-	-- formatting & linting
-	-- use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-	-- use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
-
 	-- formatting width conform replace null-ls
 	use({
 		"stevearc/conform.nvim",
@@ -131,23 +128,25 @@ return packer.startup(function(use)
 
 	use("WhoIsSethDaniel/mason-tool-installer.nvim")
 
-	-- use({
-	-- 	"lukas-reineke/indent-blankline.nvim",
-	-- 	config = function()
-	-- 		-- Other blankline configuration here
-	-- 		require("ibl").setup(require("indent-rainbowline").make_opts({}))
-	-- 	end,
-	-- 	requires = {
-	-- 		"TheGLander/indent-rainbowline.nvim",
-	-- 	},
-	-- })
-
-	use("lukas-reineke/indent-blankline.nvim")
-	use("TheGLander/indent-rainbowline.nvim")
+	-- use("lukas-reineke/indent-blankline.nvim")
+	-- use("TheGLander/indent-rainbowline.nvim")
 
 	use("brenoprata10/nvim-highlight-colors")
 
-	-- use("tribela/vim-transparent")
+	use("tribela/vim-transparent")
+
+	-- statusline
+	use("nvim-lualine/lualine.nvim")
+
+	use({ "stevearc/dressing.nvim" })
+
+	use({
+		"akinsho/git-conflict.nvim",
+		tag = "*",
+		config = function()
+			require("git-conflict").setup()
+		end,
+	})
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
