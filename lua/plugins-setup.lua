@@ -133,7 +133,7 @@ return packer.startup(function(use)
 
 	use("brenoprata10/nvim-highlight-colors")
 
-	use("tribela/vim-transparent")
+	-- use("tribela/vim-transparent")
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
