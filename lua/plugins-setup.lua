@@ -86,7 +86,7 @@ return packer.startup(function(use)
 	-- snippets
 	use("l3mon4d3/luasnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletio
-	use("rafamadriz/friendly-snippets") -- useful snippets
+	use("NguyenVanThinh2000/friendly-snippets") -- useful snippets
 
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
@@ -128,8 +128,8 @@ return packer.startup(function(use)
 
 	use("WhoIsSethDaniel/mason-tool-installer.nvim")
 
-	-- use("lukas-reineke/indent-blankline.nvim")
-	-- use("TheGLander/indent-rainbowline.nvim")
+	use("lukas-reineke/indent-blankline.nvim")
+	use("TheGLander/indent-rainbowline.nvim")
 
 	use("brenoprata10/nvim-highlight-colors")
 
