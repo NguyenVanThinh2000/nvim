@@ -79,7 +79,7 @@ require("nvim-tree").setup({
 				default = "",
 				symlink = "",
 				bookmark = "󰆤",
-				modified = "[+]",
+				modified = " ",
 				folder = {
 					arrow_closed = "",
 					arrow_open = "",
@@ -91,13 +91,13 @@ require("nvim-tree").setup({
 					symlink_open = "",
 				},
 				git = {
-					unstaged = "✗",
-					staged = "✓",
-					unmerged = "",
-					renamed = "➜",
-					untracked = "★",
-					deleted = "",
-					ignored = "◌",
+					unstaged = "",
+					staged = " ✓",
+					unmerged = " ",
+					renamed = " ➜",
+					untracked = " ★",
+					deleted = " ",
+					ignored = " ◌",
 				},
 			},
 		},
@@ -131,10 +131,10 @@ require("nvim-tree").setup({
 			max = vim.diagnostic.severity.ERROR,
 		},
 		icons = {
-			hint = "",
-			info = "",
-			warning = "",
-			error = "",
+			hint = " ",
+			info = " ",
+			warning = " ",
+			error = " ",
 		},
 	},
 	filters = {
@@ -142,3 +142,7 @@ require("nvim-tree").setup({
 	},
 	on_attach = my_on_attach,
 })
+
+vim.cmd([[
+  :hi NvimTreeOpenedHL guifg=#ff9e64
+]])
