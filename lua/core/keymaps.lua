@@ -96,3 +96,6 @@ keymap.set("n", "<leader>ra", ":%s/\\<<C-r><C-w>\\>//g<left><left>", opts)
 keymap.set("v", "<leader>ra", ":s/\\<<C-r><C-w>\\>//g<left><left>", opts)
 keymap.set("n", "<leader>rw", ":%s/\\<<C-r><C-w>\\>//gc<Left><Left><Left>", opts)
 keymap.set("v", "<leader>rw", ":s/\\<<C-r><C-w>\\>//gc<Left><Left><Left>", opts)
+
+-- refresh nvim
+keymap.set("n", "<leader>rf", ":source %<cr>", opts)

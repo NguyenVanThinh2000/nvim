@@ -144,5 +144,6 @@ require("nvim-tree").setup({
 })
 
 vim.cmd([[
-  :hi NvimTreeOpenedHL guifg=#ff9e64
+  :hi NvimTreeOpenedHL guifg=#ff9e64 guibg=transparent
+  :hi NvimTreeModifiedIcon guifg=#ff9e64 guibg=transparent
 ]])
