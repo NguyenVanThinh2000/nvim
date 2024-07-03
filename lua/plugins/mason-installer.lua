@@ -6,6 +6,7 @@ require("mason-tool-installer").setup({
 		"prettier",
 		"prettierd",
 		"eslint_d",
+		"eslint",
 		-- "isort",
 		-- "black",
 	},
