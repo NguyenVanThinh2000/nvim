@@ -1,19 +1,19 @@
 require("conform").setup({
 	formatters_by_ft = {
-		javascript = { { "prettierd", "prettier" } },
+		javascript = { { "prettier" } },
 		typescript = { { "prettier" } },
-		javascriptreact = { { "prettierd", "prettier" } },
-		typescriptreact = { { "prettierd", "prettier" } },
-		svelte = { { "prettierd", "prettier" } },
-		css = { { "prettierd", "prettier" } },
-		scss = { { "prettierd", "prettier" } },
-		html = { { "prettierd", "prettier" } },
-		json = { { "prettierd", "prettier" } },
-		yaml = { { "prettierd", "prettier" } },
-		markdown = { { "prettierd", "prettier" } },
-		graphql = { { "prettierd", "prettier" } },
-		prettierrc = { { "prettierd", "prettier" } },
-		eslintrc = { { "prettierd", "prettier" } },
+		javascriptreact = { { "prettier" } },
+		typescriptreact = { { "prettier" } },
+		svelte = { { "prettier" } },
+		css = { { "prettier" } },
+		scss = { { "prettier" } },
+		html = { { "prettier" } },
+		json = { { "prettier" } },
+		yaml = { { "prettier" } },
+		markdown = { { "prettier" } },
+		graphql = { { "prettier" } },
+		prettierrc = { { "prettier" } },
+		eslintrc = { { "prettier" } },
 		lua = { "stylua" },
 		-- python = { "isort", "black" },
 	},
@@ -30,6 +30,7 @@ vim.keymap.set({ "n", "v" }, "<leader>f", function()
 		timeout_ms = 500,
 	})
 end, { desc = "Format file or range (in visual mode)" })
+
 vim.api.nvim_create_autocmd("BufWritePre", {
 	pattern = "*",
 	callback = function(args)
