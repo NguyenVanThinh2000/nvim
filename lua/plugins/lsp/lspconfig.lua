@@ -110,3 +110,13 @@ lspconfig["lua_ls"].setup({
 		},
 	},
 })
+
+-- eslint config: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
+lspconfig.eslint.setup({
+	on_attach = function(_, bufnr)
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			buffer = bufnr,
+			command = "EslintFixAll",
+		})
+	end,
+})
