@@ -99,3 +99,6 @@ keymap.set("v", "<leader>rw", ":s/\\<<C-r><C-w>\\>//gc<Left><Left><Left>", opts)
 
 -- refresh nvim
 keymap.set("n", "<leader>rf", ":source %<cr>", opts)
+
+-- find word under cursor
+keymap.set("n", "fw", "/\\<<C-r><C-w>\\><cr>", opts)
