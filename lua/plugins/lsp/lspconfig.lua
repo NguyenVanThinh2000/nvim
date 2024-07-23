@@ -110,6 +110,7 @@ lspconfig["lua_ls"].setup({
 		},
 	},
 })
+<<<<<<< HEAD
 
 -- eslint config: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint
 lspconfig.eslint.setup({
@@ -152,3 +153,5 @@ lspconfig.eslint.setup({
 		})
 	end,
 })
+=======
+>>>>>>> parent of f787c99 (update eslint)
