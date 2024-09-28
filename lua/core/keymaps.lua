@@ -102,3 +102,6 @@ keymap.set("n", "<leader>rf", ":source %<cr>", opts)
 
 -- find word under cursor
 keymap.set("n", "fw", "/\\<<C-r><C-w>\\><cr>", opts)
+
+-- nvim tree collapse 
+keymap.set("n", "<leader>cl", ":NvimTreeCollapse<cr>", opts)

@@ -149,6 +149,8 @@ return packer.startup(function(use)
 		end,
 	})
 
+  use("yioneko/nvim-vtsls")
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
