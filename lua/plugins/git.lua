@@ -36,9 +36,9 @@ require("gitsigns").setup({
 		row = 0,
 		col = 1,
 	},
-	yadm = {
-		enable = false,
-	},
+	-- yadm = {
+	-- 	enable = false,
+	-- },
 })
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<leader>gd", ":DiffviewOpen<cr>", opts)
