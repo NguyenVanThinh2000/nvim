@@ -1,9 +1,29 @@
 require("telescope").setup({
 	defaults = {
 		-- layout_strategy = 'vertical',
-		-- layout_config = {
-		--   height = 0.95,
-		-- },
+		layout_config = {
+			vertical = {
+				width = 0.5,
+			},
+		},
+	},
+	pickers = {
+		find_files = {
+			hidden = true,
+			find_command = {
+				"rg",
+				"--files",
+				"--hidden",
+				"--glob=!**/.git/*",
+				"--glob=!**/.idea/*",
+				"--glob=!**/.vscode/*",
+				"--glob=!**/build/*",
+				"--glob=!**/dist/*",
+				"--glob=!**/yarn.lock",
+				"--glob=!**/package-lock.json",
+				"--glob=!**/bun.lockb",
+			},
+		},
 	},
 })
 
