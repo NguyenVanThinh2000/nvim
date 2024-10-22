@@ -135,7 +135,7 @@ require("lspconfig.configs").vtsls = require("vtsls").lspconfig -- set default s
 require("lspconfig").vtsls.setup({
 	on_attach = function(client, bufnr)
 		local opts = { noremap = true, silent = true, buffer = bufnr }
-		keymap.set("n", "<leader>ru", ":VtsExec remove_unused<cr>", opts)
+		keymap.set("n", "<leader>ru", [[ :VtsExec remove_unused<cr>:VtsExec remove_unused_imports<cr> ]], opts)
 		keymap.set("n", "<leader>ui", ":VtsExec add_missing_imports<cr>", opts)
 		keymap.set("n", "<leader>oi", ":VtsExec organize_imports<cr>", opts)
 		keymap.set("n", "<leader>si", ":VtsExec sort_imports<cr>", opts)
