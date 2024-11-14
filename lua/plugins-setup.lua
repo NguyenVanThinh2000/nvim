@@ -126,6 +126,16 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	use("sindrets/diffview.nvim") -- view git diff
 	use("github/copilot.vim")
+	use({
+		"kdheepak/lazygit.nvim",
+		requires = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			require("telescope").load_extension("lazygit")
+		end,
+	})
 
 	use("WhoIsSethDaniel/mason-tool-installer.nvim")
 
