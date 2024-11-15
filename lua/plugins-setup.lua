@@ -132,7 +132,7 @@ return packer.startup(function(use)
 		cmd = "Copilot",
 		event = "InsertEnter",
 		config = function()
-			require("copilot").setup()
+			require("copilot").setup({})
 		end,
 	})
 	use({
@@ -190,6 +190,8 @@ return packer.startup(function(use)
 	})
 
 	use("yioneko/nvim-vtsls")
+
+	use("ggandor/leap.nvim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
