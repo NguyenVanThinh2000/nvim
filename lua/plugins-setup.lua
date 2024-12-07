@@ -144,7 +144,7 @@ return packer.startup(function(use)
 	})
 	use({
 		"CopilotC-Nvim/CopilotChat.nvim",
-		branch = "canary",
+		branch = "main",
 		dependencies = {
 			{ "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
 			{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
@@ -192,6 +192,8 @@ return packer.startup(function(use)
 	use("yioneko/nvim-vtsls")
 
 	use("ggandor/leap.nvim")
+
+	use("joeytwiddle/sexy_scroller.vim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
