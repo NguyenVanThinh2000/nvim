@@ -37,9 +37,9 @@ keymap.set("n", "<leader>w", ":w<cr>", opts)
 keymap.set("i", "<C-s>", "<ESC>:w<cr>", opts)
 
 -- Duplicate line
-keymap.set("n", "<A-S-d>", "yyp", opts)
+keymap.set("n", "<C-d>", "yyp", opts)
 -- Duplicate line in visual mode
-keymap.set("v", "<A-S-d>", "yP", opts)
+keymap.set("v", "<C-d>", "yP", opts)
 
 -- Move lines and group lines up, down for windows
 keymap.set("n", "<A-k>", ":m .-2<cr>", opts)
@@ -88,8 +88,8 @@ keymap.set("n", "<leader>q", ":bd<cr>", opts)
 -- keymap.set("v", "d", '"_d', opts)
 
 -- git
-keymap.set("n", "<C-S-right>", ":NvimTreeResize +5<cr>", opts)
-keymap.set("n", "<C-S-left>", ":NvimTreeResize -5<cr>", opts)
+keymap.set("n", "<S-right>", ":NvimTreeResize +5<cr>", opts)
+keymap.set("n", "<S-left>", ":NvimTreeResize -5<cr>", opts)
 
 -- replace word
 keymap.set("n", "<leader>ra", ":%s/\\<<C-r><C-w>\\>//g<left><left>", opts)
