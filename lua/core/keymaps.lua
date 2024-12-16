@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
------------
+---------------------
 --------------------- General Keymaps
 ---------------------
 
@@ -37,9 +37,9 @@ keymap.set("n", "<leader>w", ":w<cr>", opts)
 keymap.set("i", "<C-s>", "<ESC>:w<cr>", opts)
 
 -- Duplicate line
-keymap.set("n", "<C-d>", "yyp", opts)
+keymap.set("n", "<A-S-j>", "yyp", opts)
 -- Duplicate line in visual mode
-keymap.set("v", "<C-d>", "yP", opts)
+keymap.set("v", "<A-S-j>", "yP", opts)
 
 -- Move lines and group lines up, down for windows
 keymap.set("n", "<A-k>", ":m .-2<cr>", opts)
