@@ -65,7 +65,7 @@ return packer.startup(function(use)
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
-
+	use("moll/vim-bbye") -- close buffer without closing window
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
@@ -170,11 +170,12 @@ return packer.startup(function(use)
 	use("WhoIsSethDaniel/mason-tool-installer.nvim")
 
 	use("lukas-reineke/indent-blankline.nvim")
-	use("TheGLander/indent-rainbowline.nvim")
+	-- use("TheGLander/indent-rainbowline.nvim")
 
 	use("brenoprata10/nvim-highlight-colors")
 
-	-- use("tribela/vim-transparent")
+	-- use("tribela/transparent.nvim")
+	use("xiyaowong/transparent.nvim")
 
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
@@ -193,7 +194,7 @@ return packer.startup(function(use)
 
 	use("ggandor/leap.nvim")
 
-	use("joeytwiddle/sexy_scroller.vim")
+	-- use("joeytwiddle/sexy_scroller.vim")
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

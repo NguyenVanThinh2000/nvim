@@ -101,10 +101,10 @@ keymap.set("v", "<leader>rw", ":s/\\<<C-r><C-w>\\>//gc<Left><Left><Left>", opts)
 keymap.set("n", "<leader>rf", ":source %<cr>", opts)
 
 -- find word under cursor
-keymap.set("n", "fw", "/\\<<C-r><C-w>\\><cr>", opts)
+keymap.set("n", "fw", ":Lspsaga finder<cr>", opts)
 
 -- nvim tree collapse
 keymap.set("n", "<leader>cl", ":NvimTreeCollapse<cr>", opts)
 
 -- lazygit
-keymap.set("n", "<leader>gg", ":LazyGit<cr>", opts)
+keymap.set("n", "<leader>gg", ":LazyGit<cr>")
