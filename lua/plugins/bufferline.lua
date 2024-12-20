@@ -12,7 +12,10 @@ require("bufferline").setup({
 				separator = true,
 			},
 		},
-		separator_style = "slant",
+		indicator = {
+			icon = " ",
+		},
+		-- separator_style = "slant",
 		numbers = "none",
 		max_name_length = 30,
 		show_duplicate_prefix = true, -- whether to show duplicate buffer prefix
