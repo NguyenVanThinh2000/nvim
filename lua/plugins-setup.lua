@@ -198,6 +198,8 @@ return packer.startup(function(use)
 
 	use("mg979/vim-visual-multi")
 
+	-- use("voldikss/vim-floaterm")
+	use("numToStr/FTerm.nvim")
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
