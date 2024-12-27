@@ -1,5 +1,3 @@
-vim.keymap.set("t", "qq", "<c-\\><c-n>")
-
 local state = {
 	floating = {
 		buf = -1,
@@ -44,7 +42,6 @@ end
 local toggle_terminal = function()
 	if not vim.api.nvim_win_is_valid(state.floating.win) then
 		state.floating = create_floating_window({ buf = state.floating.buf })
-		print(vim.bo[state.floating.buf].buftype)
 		if vim.bo[state.floating.buf].buftype ~= "terminal" then
 			vim.cmd.terminal()
 		end
@@ -73,4 +70,5 @@ end
 vim.api.nvim_create_user_command("FloaterminalToggle", toggle_terminal, {})
 vim.api.nvim_create_user_command("FloaterminalOpen", open_float_terminal, {})
 vim.api.nvim_create_user_command("FloaterminalClose", close_float_terminal, {})
-vim.keymap.set("n", "fl", ":FloaterminalToggle<cr>")
+vim.keymap.set("n", "fl", ":FloaterminalToggle<cr>", { noremap = true, silent = true })
+vim.keymap.set("t", "<C-q>", "<c-\\><c-n>")
