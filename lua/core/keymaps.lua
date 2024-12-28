@@ -58,7 +58,7 @@ keymap.set("n", "<S-h>", "^", opts)
 keymap.set("v", "<S-h>", "^", opts)
 
 -- delete all word at current cursor
-keymap.set("n", "dw", "daw", opts)
+keymap.set("n", "dw", "diw", opts)
 
 -- comment line
 keymap.set("n", "<leader>/", "gcc", opts_remap) -- toggle comment on current line
@@ -81,11 +81,11 @@ keymap.set("n", "di", '"_ciw', opts)
 
 keymap.set("v", "p", '"_dP', opts)
 
--- keymap.set("n", "dd", '"_dd', opts)
+keymap.set("n", "dd", '"_dd', opts)
 
 keymap.set("n", "<leader>q", ":q!<cr>", opts)
 
--- keymap.set("v", "d", '"_d', opts)
+keymap.set("v", "d", '"_d', opts)
 
 -- git
 keymap.set("n", "<S-right>", ":NvimTreeResize +5<cr>", opts)

@@ -15,13 +15,13 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 opt.iskeyword:append("-") -- consider string-string as whole word
-vim.opt.spelllang = "en_us"
-vim.opt.fileencoding = "utf-8" -- the encoding written to a file
-vim.opt.undofile = true -- enable persistent undo
-vim.opt.updatetime = 300 -- faster completion
-vim.opt.expandtab = true -- convert tabs to spaces
-vim.opt.spell = false
-vim.opt.laststatus = 3
--- vim.opt.laststatus = 0
+opt.spelllang = "en_us"
+opt.fileencoding = "utf-8" -- the encoding written to a file
+opt.undofile = true -- enable persistent undo
+opt.updatetime = 300 -- faster completion
+opt.expandtab = true -- convert tabs to spaces
+opt.spell = false
+opt.laststatus = 3
+-- opt.laststatus = 0
 opt.relativenumber = true -- show relative line numbers
 -- opt.background = "dark" -- colorschemes that can be light or dark will be made dark
