@@ -85,7 +85,7 @@ keymap.set("n", "dd", '"_dd', opts)
 
 keymap.set("n", "<leader>q", ":q!<cr>", opts)
 
-keymap.set("v", "d", '"_d', opts)
+-- keymap.set("v", "d", '"_d', opts)
 
 -- git
 keymap.set("n", "<S-right>", ":NvimTreeResize +5<cr>", opts)
