@@ -90,8 +90,8 @@ keymap.set("n", "<leader>q", ":q!<cr>", opts)
 -- git
 keymap.set("n", "<S-right>", ":NvimTreeResize +5<cr>", opts)
 keymap.set("n", "<S-left>", ":NvimTreeResize -5<cr>", opts)
-keymap.set("n", "<A-right>", ":NvimTreeResize +5<cr>", opts)
-keymap.set("n", "<A-left>", ":NvimTreeResize -5<cr>", opts)
+keymap.set("n", "<S-A-l>", ":NvimTreeResize +5<cr>", opts)
+keymap.set("n", "<S-A-h>", ":NvimTreeResize -5<cr>", opts)
 
 -- replace word
 keymap.set("n", "<leader>ra", ":%s/\\<<C-r><C-w>\\>//g<left><left>", opts)
