@@ -200,6 +200,9 @@ return packer.startup(function(use)
 
 	-- use("voldikss/vim-floaterm")
 	use("numToStr/FTerm.nvim")
+
+	use("luckasRanarison/tailwind-tools.nvim")
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
