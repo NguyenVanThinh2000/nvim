@@ -1,3 +1,7 @@
+vim.diagnostic.config({
+	severity_sort = true,
+})
+
 -- import lspconfig plugin safely
 local lspconfig_status, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status then
@@ -33,6 +37,12 @@ local on_attach = function(_, bufnr) -- _ is client
 	keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
 end
 
+keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts) -- smart rename
+keymap.set("n", "<leader>D", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show  diagnostics for line
+keymap.set("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show diagnostics for cursor
+keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
+keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
+keymap.set("n", "gk", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 -- used to enable autocompletion (assign to every lsp server config)
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
