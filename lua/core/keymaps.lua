@@ -53,7 +53,7 @@ keymap.set("n", "<S-k>", ":-5<cr>", opts)
 
 -- move to first or last charactor of the line
 keymap.set("n", "<S-l>", "$", opts)
-keymap.set("v", "<S-l>", "$", opts)
+keymap.set("v", "<S-l>", "$h", opts)
 keymap.set("n", "<S-h>", "^", opts)
 keymap.set("v", "<S-h>", "^", opts)
 
@@ -110,3 +110,18 @@ keymap.set("n", "<leader>cl", ":NvimTreeCollapse<cr>", opts)
 
 -- lazygit
 keymap.set("n", "<leader>gg", ":LazyGit<cr>")
+
+-- set keybinds
+keymap.set("n", "gf", "<cmd>Lspsaga finder<CR>", opts) -- show definition, references
+keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- got to declaration
+keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- see definition and make edits in window
+keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
+keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- see available code actions
+-- keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- smart rename for typescript
+keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts) -- smart rename
+keymap.set("n", "<leader>D", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show  diagnostics for line
+keymap.set("n", "gl", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show diagnostics for cursor
+keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
+keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
+keymap.set("n", "gk", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side

@@ -203,6 +203,8 @@ return packer.startup(function(use)
 
 	use("luckasRanarison/tailwind-tools.nvim")
 
+	use({ "MaximilianLloyd/tw-values.nvim" })
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
