@@ -8,7 +8,7 @@ require("conform").setup({
 		css = { "prettier", stop_after_first = true },
 		scss = { "prettier", stop_after_first = true },
 		html = { "prettier", stop_after_first = true },
-		json = { "prettier", stop_after_first = true },
+		json = { "prettierd", stop_after_first = true },
 		yaml = { "prettier", stop_after_first = true },
 		markdown = { "prettier", stop_after_first = true },
 		graphql = { "prettier", stop_after_first = true },
