@@ -65,10 +65,10 @@ keymap.set("n", "<leader>/", "gcc", opts_remap) -- toggle comment on current lin
 keymap.set("v", "<leader>/", "gc", opts_remap) -- toggle comment on current line
 
 -- switch windows
-keymap.set("n", "<C-h>", ":wincmd h<cr>", opts)
-keymap.set("n", "<C-j>", ":wincmd j<cr>", opts)
-keymap.set("n", "<C-k>", ":wincmd k<cr>", opts)
-keymap.set("n", "<C-l>", ":wincmd l<cr>", opts)
+-- keymap.set("n", "<C-h>", ":wincmd h<cr>", opts)
+-- keymap.set("n", "<C-j>", ":wincmd j<cr>", opts)
+-- keymap.set("n", "<C-k>", ":wincmd k<cr>", opts)
+-- keymap.set("n", "<C-l>", ":wincmd l<cr>", opts)
 
 -- select word
 keymap.set("n", "sw", "viw")
@@ -125,3 +125,46 @@ keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to 
 keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
 keymap.set("n", "gk", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
+
+
+-- config vscode neovim
+if vim.g.vscode then
+    local vscode = require("vscode-neovim")
+    keymap.set("n", "<Tab>", function()
+        vscode.action "workbench.action.nextEditorInGroup"
+    end)
+    keymap.set("n", "<S-Tab>", function()
+        vscode.action "workbench.action.previousEditorInGroup"
+    end)
+    keymap.set("n", "<leader>e", function()
+        vscode.action "workbench.files.action.focusFilesExplorer"
+    end)
+    keymap.set({"n", "i"}, ">", function()
+        vscode.action "editor.action.indentLines"
+    end)
+    keymap.set({"n", "i"}, "<", function()
+        vscode.action "editor.action.outdentLines"
+    end)
+    -- keymap.set("n", "<C-l>", function() vscode.action"workbench.action.navigateLeft" end)
+    -- keymap.set("n", "<C-h>", function() vscode.action"workbench.action.navigateRight" end)
+    -- keymap.set("n", "<C-k>", function() vscode.action"workbench.action.navigateUp" end)
+    keymap.set({"n", "i"}, "<S-d>", function()
+        vscode.action "editor.action.duplicateSelection"
+    end)
+    keymap.set("n", "gk", function()
+        vscode.action "editor.action.showHover"
+    end)
+    keymap.set("n", "to", function()
+        vscode.action "workbench.action.closeOtherEditors"
+    end)
+    keymap.set("n", "to", function()
+        vscode.action "workbench.action.closeOtherEditors"
+    end)
+else
+    -- switch windows
+    keymap.set("n", "<C-h>", ":wincmd h<cr>", opts)
+    keymap.set("n", "<C-j>", ":wincmd j<cr>", opts)
+    keymap.set("n", "<C-k>", ":wincmd k<cr>", opts)
+    keymap.set("n", "<C-l>", ":wincmd l<cr>", opts)
+end
+
