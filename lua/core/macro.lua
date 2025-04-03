@@ -18,3 +18,4 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.keymap.set("v", "<A-S-l>", "y@l")
+vim.keymap.set("v", "<leader>l", "y@l")
