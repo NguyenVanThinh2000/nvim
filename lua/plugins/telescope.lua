@@ -15,6 +15,7 @@ require("telescope").setup({
 				"rg",
 				"--files",
 				"--hidden",
+				"--no-ignore",
 				"--glob=!**/.git/*",
 				"--glob=!**/.idea/*",
 				"--glob=!**/.vscode/*",
@@ -23,6 +24,7 @@ require("telescope").setup({
 				"--glob=!**/yarn.lock",
 				"--glob=!**/package-lock.json",
 				"--glob=!**/bun.lockb",
+				"--glob=!**/node_modules/*",
 			},
 		},
 		live_grep = {
