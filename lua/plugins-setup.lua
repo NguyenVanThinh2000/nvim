@@ -205,6 +205,8 @@ return packer.startup(function(use)
 
 	use({ "MaximilianLloyd/tw-values.nvim" })
 
+	use("karb94/neoscroll.nvim")
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
