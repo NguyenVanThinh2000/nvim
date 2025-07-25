@@ -32,3 +32,6 @@ else
 	require("plugins.float-terminal")
 	require("plugins.tailwind-tools")
 end
+
+-- select all
+vim.keymap.set("n", "<C-a>", "gg<S-v>G")
